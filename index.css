@@ -1,0 +1,67 @@
+header {
+  text-align: center;
+  }
+
+h1 {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  font-family: Helvetica, sans-serif; 
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2.5px;
+  color: 	#2c2b2b;   
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-family: Helvetica, sans-serif; 
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: 	#2c2b2b;
+}
+
+a {
+  display: block;
+  margin-bottom: 15px;
+  color: #2c2b2b;
+  font-family: Helvetica, sans-serif; 
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  align-items: center; 
+  justify-content: space-between;
+  width: 100%;
+}
+
+.column {
+  width: 30%; 
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.desktop {
+  width:75%; 
+  height: auto;
+}
+
+.center-link {
+  margin-top: 30px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.images {
+  display: flex;         
+  flex-direction: column;  
+  align-items: center;    
+  gap: 36px 
+}
+
+.keyboard {
+  width: 50%;
+  height: auto;
+}
