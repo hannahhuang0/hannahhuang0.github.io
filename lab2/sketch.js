@@ -97,7 +97,7 @@ var puddle = {
     h: 7,
     r: 8,
     colour: '#6a7ed1',
-    widthIncrement: 0.2,
+    widthIncrement: 0.24,
 
     draw: function() {
         fill(this.colour);
