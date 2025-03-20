@@ -3,15 +3,15 @@ let blue, orange, green, red;
 function setup() {
   noCanvas();
   
-  // create and display the video
+  // Create and display the video
   let video;
   video = createVideo(('pattern.mp4'));
-  video.volume(0);
+  video.volume(0); // Mute the video to autoplay
 
   video.loop();
   video.play();
 
-  // create the images
+  // Create the images
   blue = createImg('img_blue.png');
   orange = createImg('img_orange.png');
   green = createImg('img_green.png');
@@ -20,24 +20,27 @@ function setup() {
   positionImages();
 }
 
-
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-  positionImages();
+  positionImages(); // Reposition the images
   video.play();
   video.loop();
 }
 
 function positionImages() {
-  blue.position(windowWidth * 1 / 5, windowHeight - 60);  
-  blue.size(50, 50);
+  let squareSize = 60; // Define the size of the images
+  let distanceFromBottom = 85;
 
-  orange.position(windowWidth * 2 / 5, windowHeight - 60);
-  orange.size(50, 50);
+  // Position the images and set their size
+  blue.position(windowWidth * 1 / 5, windowHeight - distanceFromBottom);  
+  blue.size(squareSize, squareSize);
 
-  green.position(windowWidth * 3 / 5, windowHeight - 60);
-  green.size(50, 50);
+  orange.position(windowWidth * 2 / 5, windowHeight - distanceFromBottom);
+  orange.size(squareSize, squareSize);
 
-  red.position(windowWidth * 4 / 5, windowHeight - 60);
-  red.size(50, 50);
+  green.position(windowWidth * 3 / 5, windowHeight - distanceFromBottom);
+  green.size(squareSize, squareSize);
+
+  red.position(windowWidth * 4 / 5, windowHeight - distanceFromBottom);
+  red.size(squareSize, squareSize);
 }
+
