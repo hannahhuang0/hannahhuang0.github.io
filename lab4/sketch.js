@@ -22,6 +22,8 @@ function setup() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   positionImages();
+  video.play();
+  video.loop();
 }
 
 function positionImages() {
