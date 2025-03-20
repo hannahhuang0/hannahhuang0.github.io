@@ -80,7 +80,6 @@ function draw (){
         rect(mouseX - 30, mouseY - 30, 60, 60, cornerRoundnessSlider.value());
     }
 
-    pattern.draw();
 
 }
 
