@@ -6,6 +6,8 @@ function setup() {
   // create and display the video
   let video;
   video = createVideo(('pattern.mp4'));
+  video.volume(0);
+
   video.loop();
   video.play();
 
