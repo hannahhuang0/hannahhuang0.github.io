@@ -80,9 +80,9 @@ function draw (){
         rect(mouseX - 30, mouseY - 30, 60, 60, cornerRoundnessSlider.value());
     }
 
+    pattern.draw();
 
 }
-
 
 function repaint(){
     background(bgColourPicker.value());
@@ -146,6 +146,7 @@ function createColorPickerLabel1(text, control) {
     label.style('font-weight', '500');
     label.style('text-transform', 'uppercase');
     label.position(control.x - 32, control.y + 36);
+    
 }
 
 
@@ -158,6 +159,7 @@ function createColorPickerLabel2(text, control) {
     label.style('font-weight', '500');
     label.style('text-transform', 'uppercase');
     label.position(control.x - 55, control.y + 36);
+    
 }
 
 
@@ -170,6 +172,7 @@ function createColorPickerLabel3(text, control) {
     label.style('font-weight', '500');
     label.style('text-transform', 'uppercase');
     label.position(control.x - 50, control.y + 36);
+    
 }
 
 
@@ -183,8 +186,8 @@ function createSliderLabel(text, control) {
     label.style('text-transform', 'uppercase');
     label.position(control.x + 8.5, control.y + 30);
     label.style('text-align', 'center');
-}
 
+}
 
 function arrowKeys(text){
     let arrowText = createDiv(text);
@@ -196,4 +199,3 @@ function arrowKeys(text){
     arrowText.style('text-align', 'center');
     arrowText.style('padding-top', '15px');
 }
-
