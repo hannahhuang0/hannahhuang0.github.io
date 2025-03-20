@@ -3,15 +3,15 @@ let blue, orange, green, red;
 function setup() {
   noCanvas();
   
-  // Create and display the video
+  // create the video
   let video;
   video = createVideo(('pattern.mp4'));
-  video.volume(0); // Mute the video to autoplay
+  video.volume(0); // mute the video to autoplay
 
   video.loop();
   video.play();
 
-  // Create the images
+  // create the images
   blue = createImg('img_blue.png');
   orange = createImg('img_orange.png');
   green = createImg('img_green.png');
@@ -21,16 +21,15 @@ function setup() {
 }
 
 function windowResized() {
-  positionImages(); // Reposition the images
+  positionImages(); 
   video.play();
   video.loop();
 }
 
 function positionImages() {
-  let squareSize = 60; // Define the size of the images
+  let squareSize = 60; 
   let distanceFromBottom = 85;
 
-  // Position the images and set their size
   blue.position(windowWidth * 1 / 5, windowHeight - distanceFromBottom);  
   blue.size(squareSize, squareSize);
 
