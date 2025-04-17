@@ -98,8 +98,8 @@ function setup() {
   resetButton = createButton('Reset');
   resetButton.parent(buttonContainer);
   resetButton.mousePressed(() => {
-    clearStorage();   // clears highscore
-    highscore = 0;
+    // clearStorage();   // clears highscore
+    // highscore = 0;
     score = 0;
     currentTime = 0;
     timeRemaining = 30;
