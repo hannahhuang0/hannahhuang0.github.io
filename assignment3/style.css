@@ -31,7 +31,7 @@ h2, h3{
 
 /* examples heading */
 h3 {
-  margin-top: 0px; /* Move higher */
+  margin-top: 0px; 
   margin-bottom: 5;
   font-weight: 600;
 }
