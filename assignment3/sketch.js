@@ -317,16 +317,24 @@ let mySketch = function(p) {
     if (isMouseOverUI() || isEditing) return;   // don't interact if UI is active or editing
     let clickedText = false;
     
-    // loop through text elements in reverse to detect which one is clicked
+    // -----------------------------------------------
+    // Remixed from p5.js text Ascent() and textDescent() tutorials
+    // https://p5js.org/reference/p5/textAscent/      <--- textAscent()
+    // https://p5js.org/reference/p5/textDescent/     <--- textDescent()
+      // loop through text elements in reverse to detect which one is clicked
     for (let i = textElements.length - 1; i >= 0; i--) {
       let t = textElements[i];
       p.textSize(t.size);
+      p.textFont(t.font || 'Helvetica');    // keeps the bounding box and click position for rotating icon consistent
       let tw = p.textWidth(t.content);
-      let th = t.size;
+      let th = p.textAscent() + p.textDescent();   
       let dx = p.mouseX - t.x;
       let dy = p.mouseY - t.y;
       let rotateHandleDist = p.dist(p.mouseX, p.mouseY, t.x + p.cos(t.rotation) * (tw / 2 + 15), t.y + p.sin(t.rotation) * (tw / 2 + 15));
-      
+    // Code was referenced to help calculate the ascent and descent of the current font size
+    // End remix for textAscent() and textDescent() tutorials
+    // -----------------------------------------------
+  
       // if the rotate handle is clicked, start rotating the text
       if (rotateHandleDist < 15) {
         selectedText = t;
