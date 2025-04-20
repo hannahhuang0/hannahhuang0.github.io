@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 3 - Text Adventure </title>
+  
+  <!-- google api for different fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto|Lobster|Oswald|Playfair+Display|Merriweather|Raleway|Lora|Poppins|Bebas+Neue|Open+Sans+Condensed|Roboto+Condensed|Anton|Barlow+Condensed|Abril+Fatface&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="p5.min.js"></script>
+</head>
+
+<header>
+  <h1>Typography&nbsp;&nbsp;Poster&nbsp;&nbsp;Designer</h1>
+</header>
+
+<body>
+  <!-- controls -->
+  
+  <div id="controls"></div>
+  <div id="canvas-container"></div>
+  
+  <!-- instructions and examples -->
+  <div id="instructionsAndGallery">
+    <!-- instructions block -->
+    <div id="instructionsBlock">
+      <h2>HOW TO USE</h2>
+      <ul>
+        <li><strong>Min canvas size:</strong> 100 × 100px<br>(w × h)</li>
+        <li><strong>Max canvas size:</strong> 900 × 900px<br>(w × h)</li>
+        <li><strong>Enter:</strong> enter/update text input</li>
+        <li><strong>Delete:</strong> remove selected text</li>
+        <li><strong>Click:</strong> select, translate, rotate text</li>
+        <li><strong>Double-click text:</strong> edit selected text</li>
+        <li><strong>F2:</strong> fullscreen mode</li>
+        <li><strong>Esc:</strong> exit fullscreen mode</li>
+        <li><strong>Tip:</strong> text can be used to form lines and shapes</li>
+        
+      </ul>
+    </div>
+    
+    <!-- images -->
+    <div class="image-gallery">
+      <h3>EXAMPLES</h3>
+      <div class="image-container">
+        <img src="img_1.png" alt="Example 1" class="image" onclick="openImage(this)">
+      </div>
+      <div class="image-container">
+        <img src="img_2.png" alt="Example 2" class="image" onclick="openImage(this)">
+      </div>
+      <div class="image-container">
+        <img src="img_3.png" alt="Example 3" class="image" onclick="openImage(this)">
+      </div>
+    </div>
+  </div>
+  
+  <!-- for fullscreen image -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">×</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  
+  
+  <script src="sketch.js"></script>
+  
+  
+  
+</body>
+
+</html>
