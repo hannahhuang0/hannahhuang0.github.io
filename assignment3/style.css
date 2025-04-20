@@ -33,10 +33,7 @@ h2, h3{
 h3 {
   margin-top: -10px; /* Move higher */
   margin-bottom: 5;
-  padding: 18px;
-  border-radius: 2px;
-  border: 1px solid #7e8dd3;
-  background-color: #EFEFEF;
+  font-weight: 600;
 }
 
 /* controls (inputs, selects, buttons) */
@@ -108,11 +105,10 @@ input[type="range"] {
 }
 
 
-/* instructions block */
-#instructionsBlock {
-  position: absolute;
+/* instructions block and image text */
+#instructionsBlock,
+#image-text {
   top: 284px;
-  left: 6.5%;
   width: 11%;
   padding: 18px;
   background-color: #EFEFEF;
@@ -122,6 +118,12 @@ input[type="range"] {
   font-size: 10px;
   color: #2c2b2b;
   letter-spacing: 1.7px;
+  position: absolute;
+}
+
+/*  instructions */
+#instructionsBlock {
+  left: 6.5%;
 }
 
 #instructionsBlock ul {
@@ -129,7 +131,7 @@ input[type="range"] {
   padding-left: 0;
 }
 
-#instructionsBlock li {
+#instructionsBlock li, #image-text li {
   position: relative;
   padding-left: 10px;
   margin-top: 13px;
@@ -144,15 +146,40 @@ input[type="range"] {
 }
 
 
+/*  image text */
+#image-text {
+  right: 6.5%;
+}
+
+#image-text ul{
+  list-style-type: none;
+  padding-left: 0;
+}
+
+#image-text li {
+  margin-left: 6px;
+}
+
+#image-text li::before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 12px;
+}
+
+
 /* image gallery */
 .image-gallery {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  top: 400px;
   width: 11%; 
   position: absolute;
   right: 6.5%; 
 }
+
 
 /* image container and image styling */
 .image-container {
