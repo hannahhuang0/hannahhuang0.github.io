@@ -31,7 +31,7 @@ h2, h3{
 
 /* examples heading */
 h3 {
-  margin-top: -10px; /* Move higher */
+  margin-top: 0px; /* Move higher */
   margin-bottom: 5;
   font-weight: 600;
 }
@@ -174,7 +174,7 @@ input[type="range"] {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  top: 400px;
+  top: 410px;
   width: 11%; 
   position: absolute;
   right: 6.5%; 
