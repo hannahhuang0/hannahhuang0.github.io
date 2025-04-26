@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Final Project</title>
+  <link rel="stylesheet" href="stylestool.css" />
+  <script src="p5.min.js"></script>
+</head>
+
+<body>
+  <!-- navigation bar -->
+  <nav>
+    <div class="nav-wrapper">
+      <div class="nav-column">
+        <div class="nav-name">Hannah Huang</div>
+        <div class="dropdown">
+          <div class="drop-title">
+            <div class="drop-name">
+              <a href="index.html" class="drop-name">Projects</a>
+            </div>
+            <div class="dropdown-content">
+              <a href="stool.html" class="nav-link">Duo Stool</a>
+              <a href="patternblocks.html" class="nav-link">Pattern Blocks</a>
+              <a href="bowl.html" class="nav-link">Handmade Bowl</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  
+  
+  <!-- content -->
+  <div id="container">
+    <header>
+      <h1>Duo Stool</h1>
+    </header>
+    
+    <!-- Main photo -->
+    <div id="mainPhoto">
+      <img src="mainStool.jpg" alt="Duo Stool Photo" />
+    </div>
+    
+    <div id="specifications">
+      <h3>Specifications</h3>
+      <p class="label">Materials: pine wood, screws, nails</p>
+      
+      <p class="label">Size: 42cm x 38cm x 26cm</p>
+    </div>
+    
+    
+    
+    <div id="description">
+      <p>Duo is a user-friendly stool designed for comfortable seating and versatile storage, 
+        while also allowing for easy disassembly and enabling the parts to be repurposed. 
+        Its adjustable shelf accommodates both small and large items, 
+        while the gap between the seat panels makes it easy to lift and carry from the center.
+      </p>
+    </div>
+    
+    
+    <!-- photo grid -->
+    <div id="photo-grid">
+      <h2>Photos</h2>
+      <div class="grid">
+        <img src="img_stoolFront.jpg" alt="Front view of stool">
+        <img src="img_stoolBack.jpg" alt="Back view of stool">
+        <img src="img_stoolSmallshelf.jpg" alt="Small shelf">
+        <img src="img_stoolLargeshelf.jpg" alt="Large shelf">
+      </div>
+    </div>
+    
+    
+    <h2>3D Model</h2>
+    <!-- Canvas stuff -->
+    <div id="canvas-container"></div>
+    
+    <div id="instructions">
+      <p>Drag mouse to orbit</p>
+    </div>
+    
+  </div>
+  
+  <script src="stool.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-top: 65px;
+  margin-bottom: 65px;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #2c2b2b;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+
+
+/* nav bar */
+nav {
+  width: 92%;
+  background: transparent;
+  position: sticky;
+  top: 45px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.nav-name {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #2c2b2b;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: underline;
+}
+
+.nav-name:hover {
+  transform: scale(1.05);
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background-color: transparent;
+  min-width: 260px;
+  z-index: 1;
+  padding: 0px;
+  font-family: Helvetica, sans-serif;
+  font-size: 11.5px;
+  color: #2c2b2b;
+  letter-spacing: 1.5px;
+}
+
+.nav-name:hover .dropdown {
+  display: block;
+}
+
+
+
+
+/* linked icons and titles */
+#link-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  margin-bottom: 65px;
+}
+
+.link-item a {
+  text-decoration: none;
+  color: #2c2b2b;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link-item img {
+  width: 100px; 
+  height: auto;
+  margin-bottom: 8px;
+  transition: transform 0.2s ease;
+  image-rendering: auto; 
+}
+
+.link-item a:hover img {
+  transform: scale(1.05);
+}
+
+.link-item p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: transform 0.2s ease, font-size 0.2s ease;
+}
+
+.link-item a:hover p {
+  transform: scale(1.02);
+  font-size: 14px;
+}

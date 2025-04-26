@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Final Project</title>
+  <link rel="stylesheet" href="stylepatternblocks.css" />
+  <script src="p5.min.js"></script>
+</head>
+
+<body>
+
+    <!-- navigation bar -->
+    <nav>
+      <div class="nav-wrapper">
+          <div class="nav-column">
+              <div class="nav-name">Hannah Huang</div>
+              <div class="dropdown">
+                  <div class="drop-title">
+                      <div class="drop-name">
+                          <a href="index.html" class="drop-name">Projects</a>
+                      </div>
+                      <div class="dropdown-content">
+                          <a href="stool.html" class="nav-link">Duo Stool</a>
+                          <a href="patternblocks.html" class="nav-link">Pattern Blocks</a>
+                          <a href="bowl.html" class="nav-link">Handmade Bowl</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </nav>
+  
+
+
+<!-- content -->
+  <div id="container">
+    <header>
+      <h1>Pattern Blocks</h1>
+    </header>
+
+    <!-- Main photo -->
+    <div id="mainPhoto">
+      <img src="mainPattern.jpg" alt="Pattern Blocks Photo" />
+    </div>
+
+
+    <div id="specifications">
+      <h3>Specifications</h3>
+      <p class="label">Materials: basswood, frosted acrylic, polymer clay, arduino, and circuitry</p>
+      
+      <p class="label">Size: 16cm x 11.5cm x 6cm</p>
+    </div>
+
+
+    <div id="description">
+      <p>Pattern Blocks is a tangible interface that explores light, diffusion, patterns, and design, encouraging experimentation and creativity. 
+        Using building blocks and light, it allows the user to form unique designs and different patterns. 
+        It helps the users, such as children, to practice their problem-solving and creative thinking skills while engaging in design. 
+        This device consists of a wooden box, frosted acrylic cubes that rest on top of an acrylic base, and polymer clay buttons.
+      </p>
+    </div>
+
+
+    <h2>How To Use</h2>
+<!-- Video stuff -->
+  <video id="myVideo" width="720" autoplay muted loop>
+    <source src="patternblocks.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <div id="video-controls">
+    <button id="pauseBtn" onclick="toggleVideo()">PAUSE</button>
+    <button id="fullscreenBtn" onclick="toggleFullscreen()">FULLSCREEN</button>
+  </div>
+
+
+<!-- photo grid -->
+<div id="photo-grid">
+  <h2>Photos</h2>
+  <div class="grid">
+    <img src="img_blue.jpg" alt="Blue Block">
+    <img src="img_orange.jpg" alt="Orange Block">
+    <img src="img_green.jpg" alt="Green Block">
+    <img src="img_red.jpg" alt="Red Block">
+  </div>
+</div>
+
+<div id="photo-single">
+  <img src="img_circuit.jpg" alt="Circuit Detail">
+</div>
+
+
+  <h2>3D Model</h2>
+<!-- Canvas stuff -->
+  <div id="canvas-container"></div>
+
+  <div id="instructions">
+    <p>Drag mouse to orbit</p>
+  </div>
+
+</div>
+
+
+
+  <script src="patternblocks.js"></script>
+</body>
+</html>

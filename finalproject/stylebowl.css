@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+h1, h2 {
+  margin-top: 65px;
+  margin-bottom: 25px;
+  font-family: Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #2c2b2b;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+
+/* orbit control and instructions */
+#instructions {
+  font-family: Helvetica, sans-serif;
+  color: #2c2b2b;
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 55px;
+}
+
+canvas {
+  margin-top: 0px;
+}
+
+
+
+/* main photo */
+#mainPhoto {
+  width: 25%;
+  height: auto;
+  margin-top: 20px;
+}
+
+#mainPhoto img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* specifications */
+#specifications {
+  width: 50%;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: Helvetica, sans-serif;
+}
+
+#specifications h3 {
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  color: #2c2b2b;
+  margin-bottom: 10px;
+  font-weight: 400;
+  margin-top: 30px;
+}
+
+#specifications .label {
+  font-size: 13px;
+  font-weight: 400;
+  color: #999;
+  margin-top: 8px;
+  margin-bottom: 3px;
+  font-family: Helvetica, sans-serif;
+  letter-spacing: 1.2px;
+}
+
+
+/* paragraph */
+#description {
+  width: 50%;
+  font-family: Helvetica, sans-serif;
+  color: #2c2b2b;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+  text-align: justify;
+  margin-bottom: 55px;
+}
+
+
+
+/* photo grid */
+#photo-grid {
+  width: 50%;
+  margin-bottom: 55px;
+  text-align: left;
+  font-family: Helvetica, sans-serif;
+}
+
+#photo-grid h2 {
+  font-size: 16px;
+  color: #2c2b2b;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+#photo-grid .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+#photo-grid .grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+#photo-grid {
+  width: 50%;
+  margin-bottom: 55px;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+#photo-grid h2 {
+  font-size: 16px;
+  color: #2c2b2b;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+#photo-grid .grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 6px;
+}
+
+#photo-grid .grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+#photo-single {
+  width: 50%;
+  margin-bottom: 55px;
+}
+
+#photo-single img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+
+
+/* nav bar */
+nav {
+  width: 92%;
+  background: transparent;
+  position: sticky;
+  top: 45px;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.nav-name {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #2c2b2b;
+  letter-spacing: 1.5px;
+  pointer-events: none;
+}
+
+
+/* drop down in nav bar */
+.dropdown {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-title {
+  font-family: Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  color: #2c2b2b;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  text-decoration: underline
+
+}
+
+.drop-title:hover {
+  transform: scale(1.02);
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+.dropdown-content a {
+  margin-top: 5px;
+  text-decoration: none;
+  font-family: Helvetica, sans-serif;
+  font-size: 11.5px;
+  color: #2c2b2b;
+  padding: 8px 0; 
+  transition: transform 0.2s ease, font-weight 0.2s;
+}
+
+.dropdown-content a:hover, .drop-name:hover {
+  transform: scale(1.02);
+  font-weight: bold;
+}
+
+.dropdown-content a.active {
+  font-weight: bold;
+  color: #2c2b2b;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  pointer-events: all;
+}
+
+.drop-name a:visited {
+  text-decoration: none;
+  color: #2c2b2b;
+}
+
+
+
+
