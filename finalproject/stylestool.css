@@ -106,8 +106,7 @@ canvas {
 /* photo grid */
 #photo-grid {
   width: 50%;
-  margin-bottom: 55px;
-  text-align: left;
+  text-align: center;
   font-family: Helvetica, sans-serif;
 }
 
@@ -133,7 +132,7 @@ canvas {
 
 #photo-grid {
   width: 50%;
-  margin-bottom: 55px;
+  margin-bottom: 65px;
   text-align: center;
   font-family: Helvetica, sans-serif;
 }
@@ -160,7 +159,6 @@ canvas {
 
 #photo-single {
   width: 50%;
-  margin-bottom: 55px;
 }
 
 #photo-single img {
@@ -169,6 +167,7 @@ canvas {
   display: block;
   object-fit: cover;
 }
+
 
 
 
@@ -268,4 +267,114 @@ nav {
 
 
 
+
+/* instruction manual */
+#booklet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 10px;
+  position: relative; 
+}
+
+/* page container  */
+#page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 50%;
+  width: 100%;
+  aspect-ratio: 3150 / 2550; 
+  background-color: transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+/* page spreads container */
+.page-spread {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  justify-content: center;
+}
+
+.page-spread img {
+  height: 100%;
+  object-fit: cover;
+  border: none;
+}
+
+.page-spread.single-page {
+  justify-content: center;
+}
+
+.page-spread.single-page img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+}
+
+.page-spread.double-page {
+  width: 100%;
+}
+
+.page-spread.double-page img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* arrow buttons */
+#booklet button {
+  background-color: transparent;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #2c2b2b;
+  transition: transform 0.2s ease-in-out;
+  position: absolute; 
+  top: 50%;
+}
+
+#booklet button:hover {
+  transform: scale(1.15);
+}
+
+/* left button (previous) */
+#prevBtn {
+  left: 20%;
+}
+
+/* right button (next) */
+#nextBtn {
+  right: 20%;
+}
+
+/* fullscreen mode */
+#page-container:fullscreen {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  aspect-ratio: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* page spreads in fullscreen */
+.page-spread {
+  display: flex;
+  width: auto;
+  max-width: 80.1%;
+  height: 100%;
+}
+
+/* hide navigation buttons by default */
+#booklet button.hidden {
+  display: none;
+}
 

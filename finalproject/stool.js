@@ -445,7 +445,7 @@ function draw() {
     // End remix for directionalLight() reference
     // -----------------------------------------------
     
-
+    
     // drawAxis();
     // strokeWeight(0);
     // origin.draw();
@@ -482,15 +482,15 @@ function draw() {
     adjustableShelf.draw();
     pop();
     
-
+    
     // -----------------------------------------------
     // Remixed from w3schools The JavaScript Switch Statement tutorial
     // https://www.w3schools.com/js/js_switch.asp
     // shelf movement
-
-         // --- This is my favourite block in my code because I was able to learn something new and its easy to understand.
-         //     I found it quite straightforward and its also effective in translating the adjustable shelf, as it is just a few simple lines being repeated.
-         //     The code is also quite organized and is convenient to modify, which I find very helpful.
+    
+    // --- This is my favourite block in my code because I was able to learn something new and its easy to understand.
+    //     I found it quite straightforward and its also effective in translating the adjustable shelf, as it is just a few simple lines being repeated.
+    //     The code is also quite organized and is convenient to modify, which I find very helpful.
     switch (shelfPhase) {
         case 0: // Move forward along Z
         shelfPosition.z += shelfSpeed;
@@ -540,13 +540,133 @@ function windowResized() {
 
 // axis function to help with drawing the objects
 function drawAxis(size = 300) {
-    // X axis - Red
+    // X axis - red
     stroke(255, 0, 0);
     line(0, 0, 0, size, 0, 0);
-    // Y axis - Green
+    // Y axis - green
     stroke(0, 255, 0);
     line(0, 0, 0, 0, size, 0);
-    // Z axis - Blue
+    // Z axis - blue
     stroke(0, 0, 255);
     line(0, 0, 0, 0, 0, size);
 }
+
+
+
+
+// instruction manual
+const pages = [
+    'img_pg1.jpg',    // cover
+    'img_pg2.jpg', 'img_pg3.jpg',
+    'img_pg4.jpg', 'img_pg5.jpg',
+    'img_pg6.jpg', 'img_pg7.jpg',
+    'img_pg8.jpg', 'img_pg9.jpg',
+    'img_pg10.jpg', 'img_pg2.jpg'
+];
+
+let currentIndex = 0;
+
+const leftPage = document.getElementById('leftPage');
+const rightPage = document.getElementById('rightPage');
+const nextBtn = document.getElementById('nextBtn');
+const prevBtn = document.getElementById('prevBtn');
+
+function updatePages() {
+    const spread = document.getElementById('spread');
+    
+    if (currentIndex === 0) {
+        // show cover only
+        spread.className = 'page-spread single-page';
+        leftPage.src = pages[0];
+        rightPage.src = '';
+    } else {
+        // show two pages
+        spread.className = 'page-spread double-page';
+        leftPage.src = pages[currentIndex];
+        rightPage.src = pages[currentIndex + 1] || '';
+    }
+    
+    updateNavigationButtons();
+}
+
+// update visibility of navigation buttons
+function updateNavigationButtons() {
+    if (currentIndex === 0) {
+        prevBtn.style.display = 'none';  // hide prev button on the first page
+        nextBtn.style.display = 'block'; // show next button on the first page
+    } else if (currentIndex + 2 >= pages.length) {
+        prevBtn.style.display = 'block'; // show prev button on the last page
+        nextBtn.style.display = 'none';  // hide next button on the last page
+    } else {
+        prevBtn.style.display = 'block'; // show prev button
+        nextBtn.style.display = 'block'; // show next button
+    }
+}
+
+// flipping through pages
+nextBtn.addEventListener('click', () => {
+    if (currentIndex === 0) {
+        currentIndex = 1;
+    } else if (currentIndex + 2 < pages.length) {
+        currentIndex += 2;
+    }
+    updatePages();
+});
+
+prevBtn.addEventListener('click', () => {
+    if (currentIndex === 1) {
+        currentIndex = 0;
+    } else if (currentIndex >= 2) {
+        currentIndex -= 2;
+    }
+    updatePages();
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') {
+        if (currentIndex === 0) {
+            currentIndex = 1;
+        } else if (currentIndex + 2 < pages.length) {
+            currentIndex += 2;
+        }
+        updatePages();
+    }
+    
+    if (e.key === 'ArrowLeft') {
+        if (currentIndex === 1) {
+            currentIndex = 0;
+        } else if (currentIndex >= 2) {
+            currentIndex -= 2;
+        }
+        updatePages();
+    }
+});
+
+// show and update booklet
+updatePages();
+
+
+// -----------------------------------------------
+// Remixed from w3schools Fullscreen API requestFullscreen() tutorial
+// https://www.w3schools.com/jsref/met_element_requestfullscreen.asp
+// fullscreen toggle for instruction manual
+document.addEventListener("keydown", function(event) {
+    // press f for fullscreen, esc for escape is already built in
+    if (event.key === 'f' || event.key === 'F') {
+        let pageContainer = document.getElementById("page-container");
+        
+        if (!document.fullscreenElement) {
+            if (pageContainer.requestFullscreen) {
+                pageContainer.requestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        }
+    }
+});
+// Code was referenced to allow instruction manual to be opened in fullscreen, and exited using esc
+// End remix for Fullscreen API requestFullscreen() tutorial
+// -----------------------------------------------
+

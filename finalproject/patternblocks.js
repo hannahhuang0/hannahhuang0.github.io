@@ -113,7 +113,7 @@ let cube = {
         pop();
     }
 };
-// Code was remixed to help create the sides of cubes individually, which allows for the top surface to have a design while the sides are plain
+// Code was remixed to help create the sides of cubes individually which allows for the top surface to have a design while the sides are plain
 // End remix for vertex() tutorial
 // -----------------------------------------------
 
@@ -129,7 +129,7 @@ let buttons = [
     { radius: 3.25, h: 10, x: 13, y: -31, z: 48, colour: '#bccf78', strokeColour: '#bccf78', moveDirection: 1, moveTimer: 0, isMoving: false, hasMoved: false, phase: 2 },
     { radius: 3.25, h: 10, x: 38, y: -31, z: 48, colour: '#c46f60', strokeColour: '#c46f60', moveDirection: 1, moveTimer: 0, isMoving: false, hasMoved: false, phase: 3 }
 ];
-// Code was remixed to help create the cylidrical buttons
+// Code was remixed to help create the cylindrical buttons
 // End remix for Cylinder tutorial
 // -----------------------------------------------
 
@@ -177,7 +177,9 @@ function drawButton(button) {
     pop();
 }
 
+// function to animate movement of buttons one at a time
 function triggerNextButtonMovement() {
+    // loops the animation
     let allButtonsMoved = true;
     for (let i = 0; i < buttons.length; i++) {
         if (!buttons[i].hasMoved) {
@@ -199,6 +201,7 @@ function triggerNextButtonMovement() {
     }
 }
 
+// reset button position to allow for loop
 function resetButtons() {
     for (let i = 0; i < buttons.length; i++) {
         buttons[i].hasMoved = false;
@@ -255,7 +258,6 @@ function draw() {
 
 
     textureMode(NORMAL);
-    // drawAxis();
     strokeWeight(0);
     
 
@@ -289,10 +291,17 @@ function draw() {
     
     // add lighting to the environment, impacting the surfaces, except for the cube surfaces
     ambientLight(155, 151, 145);
+    
+    // -----------------------------------------------
+    // Remixed from directionalLight() reference
+    // https://p5js.org/reference/p5/directionalLight/
     directionalLight(187, 187, 187, -1, 1, 1);
     directionalLight(50, 50, 50, -1, 1, -1);
     directionalLight(50, 50, 50, 1, 0, -1);
     directionalLight(20, 20, 20, 0, 1, 0);
+    // Code was remixed to add shadows and highlights to the objects
+    // End remix for directionalLight() reference
+    // -----------------------------------------------
     
     mainBox.draw();
     
@@ -309,15 +318,7 @@ function windowResized() {
 }
 
 
-// --- axis ---
-function drawAxis(size = 300) {     // to help with drawing out the objects
-    stroke(255, 0, 0); // X
-    line(0, 0, 0, size, 0, 0);
-    stroke(0, 255, 0); // Y
-    line(0, 0, 0, 0, size, 0);
-    stroke(0, 0, 255); // Z
-    line(0, 0, 0, 0, 0, size);
-}
+
 
 // for playing and pausing the video
 function toggleVideo() {

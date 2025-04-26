@@ -3,7 +3,7 @@
 // camera movement could be useful https://p5js.org/reference/p5.Camera/camera/
 
 
-// rotate y https://p5js.org/reference/p5/rotateY/
+// rotate x https://p5js.org/reference/p5/rotateX/
 
 // cylinder https://p5js.org/reference/p5/cylinder/
 
@@ -18,7 +18,7 @@
 
 
 // switch case https://www.w3schools.com/js/js_switch.asp
-
+// request fullscreen https://www.w3schools.com/jsref/met_element_requestfullscreen.asp
 
 
 // --- add home pg  ---
