@@ -20,7 +20,8 @@ h1 {
     border-radius: 5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     width: 80%;
-    margin: 0 auto 10px auto;
+    margin: 0 auto;
+    margin-bottom: 10px;
     text-align: center;
     font-family: Helvetica, sans-serif; 
     font-size: 14px;
@@ -33,7 +34,6 @@ h1 {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
 }
 
 #score,
@@ -66,7 +66,6 @@ button {
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
-
     background-color: #98a6e6;
     border: none;
     border-radius: 5px;
@@ -78,3 +77,7 @@ button {
 button:hover {
     background-color: #7E8DD3;
 }
+
+canvas {
+    margin-bottom: 40px;
+  }

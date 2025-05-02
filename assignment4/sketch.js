@@ -38,7 +38,7 @@ function preload() {
 
 // function for setup
 function setup() {
-  createCanvas(windowWidth, windowHeight * 0.7);
+  createCanvas(windowWidth, windowHeight * 0.68);
   background(200, 230, 255);
   
   if (getItem('highscore') !== null) {
@@ -99,7 +99,7 @@ function setup() {
   resetButton.parent(buttonContainer);
   resetButton.mousePressed(() => {
     // clearStorage();   // clears highscore
-    // highscore = 0; 
+    // highscore = 0;
     score = 0;
     currentTime = 0;
     timeRemaining = 30;
@@ -620,5 +620,5 @@ function displayClickMessage() {
 
 // function to resize canvas when wndow is resized
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight * 0.7); 
+  resizeCanvas(windowWidth, windowHeight * 0.68); 
 } 
