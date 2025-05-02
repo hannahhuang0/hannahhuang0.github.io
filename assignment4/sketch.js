@@ -621,4 +621,4 @@ function displayClickMessage() {
 // function to resize canvas when wndow is resized
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight * 0.68); 
-} 
+}
